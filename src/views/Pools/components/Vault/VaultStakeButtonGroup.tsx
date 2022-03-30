@@ -28,7 +28,7 @@ export const VaultStakeButtonGroup = ({
         </Button>
         <Button
           style={{ flex: 1 }}
-          disabled={!maxDuration}
+          disabled={!maxDuration || maxDuration?.isZero()}
           decorator={maxDuration?.isZero() && { text: t('Soon') }}
           onClick={onLockedClick}
         >
