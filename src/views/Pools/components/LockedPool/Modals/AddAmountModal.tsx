@@ -115,7 +115,7 @@ const AddAmountModal: React.FC<AddAmountModalProps> = ({
           currentBalance={currentBalance}
           stakingToken={stakingToken}
           onDismiss={onDismiss}
-          lockedAmount={_toNumber(lockedAmount)}
+          lockedAmount={new BigNumber(lockedAmount)}
           editAmountOnly={<RenewDuration checkedState={checkedState} setCheckedState={setCheckedState} />}
           prepConfirmArg={prepConfirmArg}
           customOverview={customOverview}
