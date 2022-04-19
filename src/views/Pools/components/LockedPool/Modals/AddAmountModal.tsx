@@ -54,7 +54,9 @@ const AddAmountModal: React.FC<AddAmountModalProps> = ({
   const [checkedState, setCheckedState] = useState(false)
   const { t } = useTranslation()
   const lockedAmountAsBigNumber = new BigNumber(lockedAmount)
-  const totalLockedAmount: number = getBalanceNumber(currentLockedAmount.plus(lockedAmountAsBigNumber))
+  const totalLockedAmount: number = getBalanceNumber(
+    currentLockedAmount.plus(getDecimalAmount(lockedAmountAsBigNumber)),
+  )
   const currentLockedAmountAsBalance = getBalanceAmount(currentLockedAmount)
 
   const usdValueStaked = useBUSDCakeAmount(lockedAmountAsBigNumber.toNumber())
