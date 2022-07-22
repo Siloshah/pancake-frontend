@@ -1,6 +1,6 @@
 const votePowerAddress = {
   v0: '0xc0FeBE244cE1ea66d27D23012B3D616432433F42',
-  v1: '0x67Dfbb197602FDB9A9D305cC7A43b95fB63a0A56',
+  v1: '0x2e10C3EA7641F94c391875F26e482DE9f9f63d00',
 }
 
 export const cakeBalanceStrategy = (version: 'v0' | 'v1') => ({
